@@ -1,126 +1,86 @@
-# Begin6
-a = float(input())
-b = float(input())
-c = float(input())
+import math
+
+# Задание 1: 
+a, b, c = map(float, input().split())
 V = a * b * c
 S = 2 * (a * b + b * c + a * c)
-print(V)
-print(S)
+print(f"{V:.2f} {S:.2f}")
 
-# Begin7
+# Задание 2: 
 R = float(input())
-pi = 3.14
-L = 2 * pi * R
-S = pi * (R ** 2)
-print(L)
-print(S)
+L = 2 * math.pi * R
+S = math.pi * R**2
+print(f"{L:.2f} {S:.2f}")
 
-# Begin8
-a = float(input())
-b = float(input())
-print((a + b) / 2)
+# Задание 3: 
+a, b = map(float, input().split())
+print(f"{(a + b) / 2:.2f}")
 
-# Begin9
-import math
-a = float(input())
-b = float(input())
-print(math.sqrt(a * b))
+# Задание 4: 
+a, b = map(float, input().split())
+print(f"{math.sqrt(a * b):.2f}")
 
-# Begin10
-a = float(input())
-b = float(input())
-sq_a = a ** 2
-sq_b = b ** 2
-print(sq_a + sq_b)
-print(sq_a - sq_b)
-print(sq_a * sq_b)
-print(sq_a / sq_b)
+# Задание 5: 
+a, b = map(float, input().split())
+a2, b2 = a**2, b**2
+print(f"{a2 + b2:.2f} {a2 - b2:.2f} {a2 * b2:.2f} {a2 / b2:.2f}")
 
-# Begin11
-a = float(input())
-b = float(input())
-abs_a = abs(a)
-abs_b = abs(b)
-print(abs_a + abs_b)
-print(abs_a - abs_b)
-print(abs_a * abs_b)
-print(abs_a / abs_b)
+# Задание 6: 
+a, b = map(float, input().split())
+abs_a, abs_b = abs(a), abs(b)
+print(f"{abs_a + abs_b:.2f} {abs_a - abs_b:.2f} {abs_a * abs_b:.2f} {abs_a / abs_b:.2f}")
 
-# Begin12
-import math
-a = float(input())
-b = float(input())
-c = math.sqrt(a**2 + b**2)
+# Задание 7: 
+a, b = map(float, input().split())
+c = math.hypot(a, b)  
 P = a + b + c
-print(c)
-print(P)
+print(f"{c:.2f} {P:.2f}")
 
-# Begin13
-R1 = float(input())
-R2 = float(input())
-pi = 3.14
-S1 = pi * (R1 ** 2)
-S2 = pi * (R2 ** 2)
-S3 = S1 - S2
-print(S1)
-print(S2)
-print(S3)
+# Задание 8: 
+R1, R2 = map(float, input().split())
+S1 = math.pi * R1**2
+S2 = math.pi * R2**2
+S3 = abs(S1 - S2)  
+print(f"{S1:.2f} {S2:.2f} {S3:.2f}")
 
-# Begin14
+# Задание 9: 
 L = float(input())
-pi = 3.14
-R = L / (2 * pi)
-S = pi * (R ** 2)
-print(R)
-print(S)
+R = L / (2 * math.pi)
+S = math.pi * R**2
+print(f"{R:.2f} {S:.2f}")
 
-# Begin15
-import math
+# Задание 10: 
 S = float(input())
-pi = 3.14
-R = math.sqrt(S / pi)
+R = math.sqrt(S / math.pi)
 D = 2 * R
-L = 2 * pi * R
-print(D)
-print(L)
+L = 2 * math.pi * R
+print(f"{D:.2f} {L:.2f}")
 
-# Begin16
-x1 = float(input())
-x2 = float(input())
-print(abs(x2 - x1))
+# Задание 11: 
+x1, x2 = map(float, input().split())
+print(f"{abs(x2 - x1):.2f}")
 
-# Begin17
-A = float(input())
-B = float(input())
-C = float(input())
+# Задание 12: 
+A, B, C = map(float, input().split())
 AC = abs(C - A)
 BC = abs(C - B)
-print(AC)
-print(BC)
-print(AC + BC)
+print(f"{AC:.2f} {BC:.2f} {AC + BC:.2f}")
 
-# Begin18
-A = float(input())
-B = float(input())
-C = float(input())
+# Задание 13: 
+A, B, C = map(float, input().split())
 AC = abs(C - A)
 BC = abs(C - B)
-print(AC * BC)
+print(f"{AC * BC:.2f}")
 
-# Begin19
-x1 = float(input())
-y1 = float(input())
-x2 = float(input())
-y2 = float(input())
-width = abs(x2 - x1)
-height = abs(y2 - y1)
-print(2 * (width + height))
-print(width * height)
+# Задание 14:
+x1, y1, x2, y2 = map(float, input().split())
+w = abs(x2 - x1)
+h = abs(y2 - y1)
+P = 2 * (w + h)
+S = w * h
+print(f"{P:.2f} {S:.2f}")
 
-# Begin20
-import math
-x1 = float(input())
-y1 = float(input())
-x2 = float(input())
-y2 = float(input())
-print(math.sqrt((x2 - x1)**2 + (y2 - y1)**2))
+# Задание 15: 
+x1, y1, x2, y2 = map(float, input().split())
+distance = math.dist((x1, y1), (x2, y2))  
+print(f"{distance:.2f}")
